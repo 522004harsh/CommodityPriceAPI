@@ -105,15 +105,16 @@ app.get("/api/get-market-data/", async (req, res) => {
 
     // Fetch the HTML Code of the provided URL
     const { data } = await axios.get(url, {
-      headers: {
+    headers: {
         "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         Referer: "https://agmarknet.gov.in/",
+        "Accept-Language": "en-US,en;q=0.5",
         Connection: "keep-alive",
-      },
+    },
     });
+
 
     // Load the HTML content into Cheerio
     const $ = cheerio.load(data);
