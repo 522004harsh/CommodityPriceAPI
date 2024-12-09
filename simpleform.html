@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Data Form</title>
+</head>
+<body>
+    <h1>Market Data Form</h1>
+    <form id="marketDataForm" action="/api/get-market-data" method="GET">
+        <label for="commodity">Commodity:</label>
+        <input type="text" id="commodity" name="commodity" required>
+        <br><br>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state">
+        <br><br>
+
+        <label for="district">District:</label>
+        <input type="text" id="district" value="0" name="district">
+        <br><br>
+
+        <label for="market">Market:</label>
+        <input type="text" id="market" value="0" name="market">
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
